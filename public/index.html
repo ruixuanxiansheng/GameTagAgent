@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tag Agent · UE5 GameplayTag 搭建器</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-text">Tag Agent</span>
+      </div>
+      <nav class="nav" id="nav"></nav>
+      <div class="sidebar-foot" id="sidebarFoot"></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <select id="projectSelect" class="select" aria-label="选择标签包"></select>
+          <button id="newProjectBtn" class="btn btn-ghost" title="新建标签包"></button>
+        </div>
+        <div class="topbar-right">
+          <label class="field-label">题材
+            <select id="genreSelect" class="select"></select>
+          </label>
+          <label class="field-label">角色
+            <select id="roleSelect" class="select"></select>
+          </label>
+          <button class="btn btn-ghost" id="settingsBtn" title="API 设置"></button>
+          <div class="dropdown" id="exportDropdown">
+            <button class="btn btn-primary" id="exportBtn"></button>
+            <div class="dropdown-menu" id="exportMenu"></div>
+          </div>
+          <button class="btn btn-accent" id="publishBtn"></button>
+        </div>
+      </header>
+
+      <section class="content" id="content"></section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden></div>
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
